@@ -35,7 +35,7 @@ const ThirdComponent = () => {
       style={{
         backgroundImage,
       }}
-      className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-4 text-gray-200"
+      className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-1 md:px-4 py-4 text-gray-200"
     >
       <div className="row">
         <motion.h3
@@ -61,7 +61,7 @@ const ThirdComponent = () => {
           companies.
         </motion.p>
       </div>
-      <div className="grid grid-cols-1 gap-8 p-2 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-8 md:p-2 md:grid-cols-2">
         <div className="col">
           <div className="py-4 mt-4 px-6 mx-4 border border-2 rounded">
             <h5 className="max-w-xl bg-gradient-to-br from-white to-pink-400 bg-clip-text text-center text-xl font-medium leading-tight text-transparent sm:text-2xl sm:leading-tight md:text-2xl md:leading-tight">
@@ -138,7 +138,7 @@ const ThirdComponent = () => {
       </div>
       <div className="absolute inset-0 z-0">
         <Canvas>
-          <Stars radius={50} count={2500} factor={4} fade speed={2} />
+          <Stars radius={30} count={2500} factor={4} fade speed={2} />
         </Canvas>
       </div>
     </motion.section>

@@ -8,7 +8,7 @@ import {
 
 const Example_3Dcard = ({ image }) => {
   return (
-    <div className="grid w-full place-content-center px-4">
+    <div className="grid w-full place-content-center px-2 md:px-4">
       <TiltCard image={image} />
     </div>
   );
@@ -60,7 +60,7 @@ const TiltCard = ({ image }) => {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative h-96 w-90 rounded-xl overflow-hidden"
+      className="relative h-96 w-100 rounded-xl overflow-hidden"
     >
       <motion.img
         src={image}

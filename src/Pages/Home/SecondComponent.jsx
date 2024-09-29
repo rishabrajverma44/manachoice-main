@@ -53,7 +53,7 @@ const SecondComponent = () => {
           </motion.div>
         </article>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 place-items-center p-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 place-items-center p-4 md:p-12">
           {cardData.map((card, index) => (
             <CardComponent key={index} image={card.image} text={card.text} />
           ))}

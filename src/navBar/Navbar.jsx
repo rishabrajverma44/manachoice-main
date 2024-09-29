@@ -32,8 +32,8 @@ const Navbar = () => {
   return (
     <>
       <main className="sticky top-0 z-50 bg-white shadow-md shadow-indigo-500/40">
-        <nav className="items-center relative z-50">
-          <div className="flex items-center w-100">
+        <nav className="items-center relative z-50 py-2 md:py-0 md:mx-0 mx-2">
+          <div className="flex items-center w-100 md:px-2">
             <section className="d-flex w-100">
               <div className="flex items-center w-100">
                 <Link to="/" className="">
