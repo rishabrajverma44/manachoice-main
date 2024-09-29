@@ -32,97 +32,104 @@ const Navbar = () => {
   return (
     <>
       <main className="sticky top-0 z-50 bg-white shadow-md shadow-indigo-500/40">
-        <nav className="flex justify-between px-8 items-center relative z-50">
+        <nav className="items-center relative z-50">
           <div className="flex items-center w-100">
-            <section className="d-flex justify-content-between w-100 py-2">
-              <div className="flex items-center w-25">
+            <section className="d-flex w-100">
+              <div className="flex items-center w-100">
                 <Link to="/" className="">
                   <img src={logo} alt="logo" className="w-100" />
                 </Link>
               </div>
 
-              <FiMenu
-                onClick={() => setMenu(true)}
-                className="text-3xl cursor-pointer md:hidden"
-              />
+              <div className="place-content-center">
+                <FiMenu
+                  onClick={() => setMenu(true)}
+                  className="text-3xl cursor-pointer md:hidden"
+                />
+              </div>
 
-              <div className="menu hidden  lg:block">
-                <div class="relative group inline-block mx-2 my-2">
-                  <span class="cursor-pointer">PRODUCTS+</span>
-                  <div class="absolute mt-2 left-0 w-full h-[4px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
-                  <div class="z-50 absolute top-full right-0 mt-4 rounded-lg w-60 bg-white shadow-md opacity-1 scale-y-0 group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-300 ease-in-out origin-top">
-                    <div class="p-2 cursor-pointer hover:bg-gray-100">
-                      <Link
-                        to="/food"
-                        className="block p-2 hover:bg-gray-100 no-underline text-black"
-                      >
-                        Food Booking App
-                      </Link>
+              <div className="menu hidden  lg:block w-100  place-content-center px-4">
+                <div className="float-end grid grid-cols-5 gap-4">
+                  <div class="relative group inline-block">
+                    <span class="cursor-pointer fw-bold">PRODUCTS+</span>
+                    <div class="absolute mt-2 left-0 w-full h-[4px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
+                    <div class="z-50 absolute top-full right-0 mt-4 rounded-lg w-60 bg-white shadow-md opacity-1 scale-y-0 group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-300 ease-in-out origin-top">
+                      <div class="p-2 cursor-pointer hover:bg-gray-100">
+                        <Link
+                          to="/food"
+                          className="block p-2 hover:bg-gray-100 no-underline text-black"
+                        >
+                          Food Booking App
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="relative group inline-block mx-2">
-                  <span class="cursor-pointer">SERVICES+</span>
-                  <div class="absolute mt-2 left-0 w-full h-[4px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
-                  <div class="z-50 absolute top-full right-0 mt-4 rounded-lg w-60 bg-white shadow-md opacity-1 scale-y-0 group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-300 ease-in-out origin-top">
-                    <div class="p-2 cursor-pointer hover:bg-gray-100">
-                      <Link
-                        to="/web-service"
-                        className="block p-2 hover:bg-gray-100 no-underline text-black"
-                      >
-                        Web Design & Development
-                      </Link>
-                    </div>
-                    <div class="p-2 cursor-pointer hover:bg-gray-100">
-                      <Link
-                        to="/mobile-service"
-                        className="block p-2 hover:bg-gray-100 no-underline text-black"
-                      >
-                        Mobile App Development
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="relative group inline-block mx-2">
-                  <span class="cursor-pointer"> TRAINING+</span>
-                  <div class="absolute mt-2 left-0 w-full h-[4px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
-                  <div class="z-50 absolute top-full right-0 mt-4 rounded-lg w-60 bg-white shadow-md opacity-1 scale-y-0 group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-300 ease-in-out origin-top">
-                    <div class="p-2 cursor-pointer hover:bg-gray-100">
-                      <Link
-                        to="/web-taining"
-                        className="block p-2 hover:bg-gray-100 no-underline text-black"
-                      >
-                        Web Design & Development
-                      </Link>
-                    </div>
-                    <div class="p-2 cursor-pointer hover:bg-gray-100">
-                      <Link
-                        to="/mobile-taining"
-                        className="block p-2 hover:bg-gray-100 no-underline text-black"
-                      >
-                        Mobile App Development
-                      </Link>
+                  <div class="relative group inline-block">
+                    <span class="cursor-pointer fw-bold">SERVICES+</span>
+                    <div class="absolute mt-2 left-0 w-full h-[4px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
+                    <div class="z-50 absolute top-full right-0 mt-4 rounded-lg w-60 bg-white shadow-md opacity-1 scale-y-0 group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-300 ease-in-out origin-top">
+                      <div class="p-2 cursor-pointer hover:bg-gray-100">
+                        <Link
+                          to="/web-service"
+                          className="block p-2 hover:bg-gray-100 no-underline text-black"
+                        >
+                          Web Design & Development
+                        </Link>
+                      </div>
+                      <div class="p-2 cursor-pointer hover:bg-gray-100">
+                        <Link
+                          to="/mobile-service"
+                          className="block p-2 hover:bg-gray-100 no-underline text-black"
+                        >
+                          Mobile App Development
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="relative group inline-block mx-2">
-                  <span class="cursor-pointer">
-                    <Link to="/about" className="no-underline text-black">
-                      ABOUT US
-                    </Link>
-                  </span>
-                  <div class="absolute mt-2 left-0 w-full h-[4px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
-                </div>
+                  <div class="relative group inline-block">
+                    <span class="cursor-pointer fw-bold"> TRAINING+</span>
+                    <div class="absolute mt-2 left-0 w-full h-[4px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
+                    <div class="z-50 absolute top-full right-0 mt-4 rounded-lg w-60 bg-white shadow-md opacity-1 scale-y-0 group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-300 ease-in-out origin-top">
+                      <div class="p-2 cursor-pointer hover:bg-gray-100">
+                        <Link
+                          to="/web-taining"
+                          className="block p-2 hover:bg-gray-100 no-underline text-black"
+                        >
+                          Web Design & Development
+                        </Link>
+                      </div>
+                      <div class="p-2 cursor-pointer hover:bg-gray-100">
+                        <Link
+                          to="/mobile-taining"
+                          className="block p-2 hover:bg-gray-100 no-underline text-black"
+                        >
+                          Mobile App Development
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
 
-                <div class="relative group inline-block mx-2">
-                  <span class="cursor-pointer">
-                    <Link to="/contact-us" className="no-underline text-black">
-                      CONTACT-US
-                    </Link>
-                  </span>
-                  <div class="absolute mt-2 left-0 w-full h-[4px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
+                  <div class="relative group inline-block">
+                    <span class="cursor-pointer fw-bold">
+                      <Link to="/about" className="no-underline text-black">
+                        ABOUT US
+                      </Link>
+                    </span>
+                    <div class="absolute mt-2 left-0 w-full h-[4px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
+                  </div>
+
+                  <div class="relative group inline-block">
+                    <span class="cursor-pointer fw-bold">
+                      <Link
+                        to="/contact-us"
+                        className="no-underline text-black"
+                      >
+                        CONTACT-US
+                      </Link>
+                    </span>
+                    <div class="absolute mt-2 left-0 w-full h-[4px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
+                  </div>
                 </div>
               </div>
             </section>
