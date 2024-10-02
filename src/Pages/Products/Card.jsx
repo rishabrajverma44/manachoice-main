@@ -1,53 +1,45 @@
 import { useState } from "react";
 
 import style from "../globlecss.module.css";
-const CardComponent = ({ image, text }) => {
-  const [isHovered, setIsHovered] = useState(false);
+import { fadeIn } from "../../libs/variants";
+import { motion } from "framer-motion";
 
+const darkenColor = (color, amount = 30) => {
+  const rgb = parseInt(color.slice(1), 16);
+  const r = Math.max(0, (rgb >> 16) - amount);
+  const g = Math.max(0, ((rgb >> 8) & 0x00ff) - amount);
+  const b = Math.max(0, (rgb & 0x0000ff) - amount);
+
+  return `#${((1 << 24) + (r << 16) + (g << 8) + b)
+    .toString(16)
+    .slice(1)
+    .padStart(6, "0")}`;
+};
+const Card = ({ image, text, color }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const borderColor = darkenColor(color);
   return (
     <div className="">
-      <div
+      <motion.div
+        variants={fadeIn("up", 0.6)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.5 }}
         className="card w-100 sm:w-64"
+        style={{
+          borderBottom: `5px solid ${borderColor}`,
+          borderRadius: "15px",
+        }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        {/* <div className="relative w-full h-64 group overflow-hidden rounded bg-gray-400 text-neutral-50 p-4 flex flex-col justify-evenly">
-
-        <div className="absolute inset-0 z-0">
-          <div className="absolute blur duration-500 group-hover:blur-none w-72 h-72 rounded-full group-hover:translate-x-12 group-hover:translate-y-12 bg-green-900 right-1 -bottom-24 flex items-center justify-center"></div>
-          <div className="absolute blur duration-500 group-hover:blur-none w-12 h-12 rounded-full group-hover:translate-x-12 group-hover:translate-y-2 bg-green-700 right-12 bottom-12"></div>
-          <div className="absolute blur duration-500 group-hover:blur-none w-36 h-36 rounded-full group-hover:translate-x-12 group-hover:-translate-y-12 bg-green-600 right-1 -top-12"></div>
-          <div className="absolute blur duration-500 group-hover:blur-none w-24 h-24 bg-green-300 rounded-full group-hover:-translate-x-12"></div>
-        </div>
-        <div className="relative z-10 w-full h-full flex flex-col justify-center items-center">
-          <img
-            src={image}
-            alt="Product"
-            className={`h-full w-full object-cover transition-opacity duration-500 ${
-              isHovered ? "opacity-0" : "opacity-100"
-            }`}
-          />
-          <div
-            className={`absolute text-white text-lg transition-opacity duration-500 ${
-              isHovered ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <p>{text}</p>
-            <div className="w-6">
-              <button class="group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-rose-300 hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] duration-500 before:duration-500 hover:duration-500 hover:after:-right-8 hover:before:right-12 hover:before:-bottom-8 hover:before:blur  origin-left hover:decoration-2 hover:text-rose-300 relative bg-neutral-800 h-8 w-32 border text-left text-gray-50 text-base font-bold rounded-lg  overflow-hidden  before:absolute before:w-6 before:h-6 before:content['']  before:z-10 before:bg-violet-500 before:rounded-full before:blur-lg px-2  after:absolute after:z-10 after:w-20 after:h-10 after:content['']  after:bg-rose-300 after:right-8 after:top-3 after:rounded-full after:blur-lg">
-                See more
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>  */}
-        <div className={style.card}>
-          <div className={style.card_content}>
+        <div className={style.food_card} style={{ backgroundColor: color }}>
+          <div className={style.food_card_content}>
             <img
               src={image}
               alt="Product"
               style={{ height: "100px", width: "250px" }}
-              className="border border-2"
+              className="border border-6"
             />
           </div>
           <div
@@ -113,9 +105,9 @@ const CardComponent = ({ image, text }) => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
 
-export default CardComponent;
+export default Card;

@@ -47,17 +47,11 @@ const SecondComponent = () => {
         </div>
 
         <div className="col bg-salte-500">
-          <div className="py-4 mt-4 px-6 mx-4">
+          <div className="py-4 mt-4 px-6 md:mx-4">
             <h5 className="max-w-xl bg-gradient-to-br from-white to-pink-400 bg-clip-text text-left text-xl font-medium leading-tight text-transparent sm:text-2xl sm:leading-tight md:text-xl md:leading-tight">
               HMS #1 | Leading the Digital Revolution in Food Industry
             </h5>
-            <motion.p
-              variants={fadeIn("right", 0.2)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-              className="p-0 m-0 max-w-xl text-left text-gray leading-relaxed md:text-lg md:leading-relaxed"
-            >
+            <p className="p-0 m-0 max-w-xl text-left text-gray leading-relaxed md:text-lg md:leading-relaxed">
               Food Booking App: The premier cloud-based food booking app,
               revolutionizing the food ordering experience. Our adaptable
               solution caters to eateries of all scales, seamlessly integrating
@@ -67,7 +61,7 @@ const SecondComponent = () => {
               overall operations. From menu exploration to secure payments, our
               app simplifies food ordering, saving time and enhancing the
               culinary journey
-            </motion.p>
+            </p>
 
             <p>
               Want to <span style={{ "font-weight": "bold" }}>kick start</span>{" "}

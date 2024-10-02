@@ -69,15 +69,15 @@ const FirstComponents = () => {
         <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-2">
           <div className="md:mx-6 p-4 my-12 rounded-lg shadow-lg">
             <motion.h1
-              variants={fadeIn("left", 0.4)}
+              variants={fadeIn("left", 0.2)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.9 }}
-              className="text-4xl font-bold mb-4"
+              className="md:text-4xl font-bold mb-4"
             >
               Food Booking App
             </motion.h1>
-            <p className="mb-6 text-xl text-pink-700">
+            <p className="mb-6 md:text-xl text-pink-700">
               Your go-to app for hotel owners to showcase and sell their
               delightful dishes!
             </p>
@@ -106,7 +106,7 @@ const FirstComponents = () => {
               </div>
               <div>
                 <motion.ul
-                  variants={fadeIn("up", 0.7)}
+                  variants={fadeIn("up", 0.4)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.9 }}
@@ -129,7 +129,7 @@ const FirstComponents = () => {
             </div>
           </div>
 
-          <div className="">
+          <div className="px-2">
             <Example_3Dcard image={food} />
           </div>
         </div>
