@@ -60,7 +60,7 @@ const TiltCard = ({ image }) => {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative h-96 w-100 rounded-xl overflow-hidden"
+      className="relative h-100 w-100 rounded-xl overflow-hidden"
     >
       <motion.img
         src={image}

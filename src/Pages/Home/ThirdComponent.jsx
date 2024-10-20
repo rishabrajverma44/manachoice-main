@@ -35,7 +35,7 @@ const ThirdComponent = () => {
       style={{
         backgroundImage,
       }}
-      className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-1 md:px-4 py-4 text-gray-200"
+      className="relative grid place-content-center overflow-hidden bg-gray-950 px-1 md:px-4 py-4 text-gray-200"
     >
       <div className="row">
         <motion.h3
@@ -43,7 +43,7 @@ const ThirdComponent = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
-          className="max-w-xl bg-gradient-to-br from-white to-green-400 bg-clip-text text-center text-xl font-medium leading-tight text-transparent sm:text-2xl sm:leading-tight md:text-4xl md:leading-tight"
+          className="max-w-xl bg-gradient-to-br from-white to-green-900 bg-clip-text text-center text-xl font-medium leading-tight text-transparent sm:text-2xl sm:leading-tight md:text-4xl md:leading-tight"
         >
           Why Choose Us
         </motion.h3>

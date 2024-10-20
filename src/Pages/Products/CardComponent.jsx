@@ -29,9 +29,6 @@ const CardComponent = ({ image, heading, para }) => {
           }`}
         >
           <p className="text-slate-950 font-semibold text-sm">{para}</p>
-          <div className="flex flex-wrap justify-center gap-2 mb-1">
-            JAVA | REACT | PHP | .NET
-          </div>
         </div>
       </div>
     </div>

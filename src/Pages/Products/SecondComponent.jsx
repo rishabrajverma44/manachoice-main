@@ -35,7 +35,7 @@ const SecondComponent = () => {
       style={{
         backgroundImage,
       }}
-      className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-1 md:px-4 py-4 text-gray-200"
+      className="relative grid place-content-center overflow-hidden bg-gray-950 px-1 md:px-4 py-4 text-gray-200"
     >
       <div className="grid grid-cols-1 gap-8 md:p-2 md:grid-cols-2">
         <div className="col py-4">

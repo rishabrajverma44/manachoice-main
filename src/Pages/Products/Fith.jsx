@@ -17,8 +17,8 @@ const Fith = () => {
   ];
 
   return (
-    <div className="py-3">
-      <div>
+    <>
+      <div className="md:px-8 md:py-10">
         <h1 className="text-pink-800 font-bold text-center">
           Why Food Booking <span className="text-blue-900">App</span>
         </h1>
@@ -68,36 +68,30 @@ const Fith = () => {
           </div>
         </div>
       </div>
-
-      <div
-        className="flex justify-center items-center"
-        style={{ backgroundColor: "red" }}
-      >
-        <div className="flex justify-center relative">
-          <span className="cursor-pointer p-3 w-24 h-24 rounded-full shadow-lg transition-transform transform hover:scale-110 hover:shadow-2xl absolute left-0">
-            <img
-              src={anroid}
-              alt="Android"
-              className="w-full h-full object-cover rounded-full"
-            />
-          </span>
-          <span className="cursor-pointer p-3 w-24 h-24 rounded-full shadow-lg transition-transform transform hover:scale-110 hover:shadow-2xl absolute left-16">
-            <img
-              src={iphone}
-              alt="iPhone"
-              className="w-full h-full object-cover rounded-full"
-            />
-          </span>
-          <span className="cursor-pointer p-3 w-24 h-24 rounded-full shadow-lg transition-transform transform hover:scale-110 hover:shadow-2xl absolute left-32">
-            <img
-              src={window}
-              alt="Windows"
-              className="w-full h-full object-cover rounded-full"
-            />
-          </span>
-        </div>
+      <div className="d-flex justify-content-end">
+        <span className="d-flex" style={{ width: "300px", height: "100px" }}>
+          <div className="flex justify-center relative ">
+            <span className="cursor-pointer p-3 w-20 h-20 rounded-full shadow-lg transition-transform transform hover:scale-110 hover:shadow-2xl absolute left-0">
+              <img src={anroid} alt="Android" className="rounded-full" />
+            </span>
+            <span className="cursor-pointer p-3 w-20 h-20 rounded-full shadow-lg transition-transform transform hover:scale-110 hover:shadow-2xl absolute left-16">
+              <img
+                src={iphone}
+                alt="iPhone"
+                className="w-full h-full object-cover rounded-full"
+              />
+            </span>
+            <span className="cursor-pointer p-3 w-20 h-20 rounded-full shadow-lg transition-transform transform hover:scale-110 hover:shadow-2xl absolute left-32">
+              <img
+                src={window}
+                alt="Windows"
+                className="w-full h-full object-cover rounded-full"
+              />
+            </span>
+          </div>
+        </span>
       </div>
-    </div>
+    </>
   );
 };
 

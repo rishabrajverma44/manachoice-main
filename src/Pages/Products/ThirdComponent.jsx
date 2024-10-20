@@ -1,21 +1,58 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../libs/variants";
-import { FiArrowRight } from "react-icons/fi";
-import web from "../../../src/asets/Images/web-dev.png";
-import mobile from "../../../src/asets/Images/mobile.png";
-import market from "../../asets/Images/social-media-marketing-new.png";
-import trainding from "../../asets/Images/traind.png";
-import Card from "./Card";
+import cost from "../../../src/asets/Images/cost_effective.png";
+import visibility from "../../../src/asets/Images/vissibility.png";
+import costomers from "../../asets/Images/costomers.png";
+import operations from "../../asets/Images/operations.png";
+import Centralized from "../../asets/Images/centeralized_processing.png";
+import data from "../../asets/Images/data_insites.png";
+import innovation from "../../asets/Images/innovation.png";
+import convenience from "../../asets/Images/convenience.png";
+import CardComponent from "./CardComponent";
 
 const ThirdComponent = () => {
   const cardData = [
-    { image: web, text: "Paragraph 1" },
-    { image: mobile, text: "Paragraph 2" },
-    { image: market, text: "Paragraph 3" },
-    { image: trainding, text: "Paragraph 4" },
-    { image: web, text: "Paragraph 5" },
-    { image: trainding, text: "Paragraph 6" },
+    {
+      image: cost,
+      heading: "Cost-Effective Marketing",
+      para: "With the app's reach, hotels can promote their offerings without breaking the bank, a pocket-friendly marketing avenue that yields results.",
+    },
+    {
+      image: visibility,
+      heading: "Increased Visibility",
+      para: "By being part of this app, hotels can showcase their delicious dishes to a wider audience, helping them stand out in the bustling culinary scene.",
+    },
+    {
+      image: costomers,
+      heading: "Expanded Customer Base",
+      para: "Embracing the app means opening doors to new customers who may have never discovered the hotel otherwise, broadening the reach.",
+    },
+    {
+      image: operations,
+      heading: "Efficient Operations",
+      para: "Utilizing the app streamlines order management, making the kitchen and operations run like a well-oiled machine, saving time and effort.",
+    },
+    {
+      image: Centralized,
+      heading: "Centralized Control",
+      para: "Hotels have the power to manage their profiles, menus, pricing, and promotions all in one place, simplifying the management process.",
+    },
+    {
+      image: data,
+      heading: "Data-Driven Insights",
+      para: "The app's analytics provide valuable insights into customer preferences, enabling hotels to tailor menus and marketing for a personalized experience.",
+    },
+    {
+      image: innovation,
+      heading: "Adaptability and Innovation",
+      para: "By joining the app, hotel owners demonstrate their ability to adapt to technological advancements, showcasing innovation in how they reach and serve their customers.",
+    },
+    {
+      image: convenience,
+      heading: "Convenience",
+      para: "Easily place food orders at your convenience.",
+    },
   ];
 
   const colors = [
@@ -34,25 +71,35 @@ const ThirdComponent = () => {
       }}
     >
       <div className="py-12">
-        <motion.h1
-          variants={fadeIn("up", 0.2)}
+        <motion.div
           initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
-          className="bg-clip-text text-center text-bold text-transparent bg-gradient-to-r from-pink-500 to-violet-500"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.5 }}
+          className="text-center"
         >
-          Benefits of Using Food <br />
-          Booking App
-        </motion.h1>
+          <motion.h1
+            variants={fadeIn("left", 0.9)}
+            className="text-bold text-green-800 mb-2"
+          >
+            Benefits of Using Food
+          </motion.h1>
+          <motion.h1
+            variants={fadeIn("right", 0.9)}
+            className="bg-clip-text text-bold text-transparent bg-gradient-to-r from-pink-800 to-green-800"
+          >
+            Booking App
+          </motion.h1>
+        </motion.div>
+
         <div className="text-center my-4"></div>
         <h3 className="d-flex justify-content-center my-4"></h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 place-items-center p-4 md:p-12">
           {cardData.map((card, index) => (
-            <Card
+            <CardComponent
               key={index}
               image={card.image}
-              text={card.text}
-              color={colors[index]}
+              heading={card.heading}
+              para={card.para}
             />
           ))}
         </div>

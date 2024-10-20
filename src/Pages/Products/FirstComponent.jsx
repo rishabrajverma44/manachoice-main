@@ -25,8 +25,8 @@ const generateFoodIcons = (count) => {
           left: `${xStart}%`,
         }}
         animate={{
-          x: [0, Math.random() * 10 - 5, Math.random() * 20 - 10, 0],
-          y: [0, Math.random() * 10 - 5, Math.random() * 20 - 10, 0],
+          x: [0, Math.random() * 10 - 5, 5 * 20 - Math.random() * 10, 0],
+          y: [0, Math.random() * 80 - 5, 5 * 20 - Math.random() * 10, 0],
           opacity: [1, 0.8, 0.6, 1],
         }}
         transition={{
@@ -48,15 +48,7 @@ const FirstComponents = () => {
 
   return (
     <motion.div
-      className="relative w-full flex  justify-center overflow-hidden"
-      initial={{ background: "linear-gradient(135deg, #a0c4ff, #d3d3d3)" }}
-      animate={{
-        background: [
-          "linear-gradient(135deg, #a0c4ff, #d3d3d3)",
-          "linear-gradient(135deg, #a0a9ff, #bfc9d6)",
-          "linear-gradient(135deg, #a0c4ff, #d3d3d3)",
-        ],
-      }}
+      className="relative w-full flex  justify-center overflow-hidden py-6"
       transition={{
         duration: 10,
         ease: "easeInOut",
@@ -73,11 +65,11 @@ const FirstComponents = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.9 }}
-              className="md:text-4xl font-bold mb-4"
+              className="md:text-4xl font-bold mb-4 text-green-900"
             >
               Food Booking App
             </motion.h1>
-            <p className="mb-6 md:text-xl text-pink-700">
+            <p className="mb-6 md:text-xl text-orange-900 font-semibold">
               Your go-to app for hotel owners to showcase and sell their
               delightful dishes!
             </p>
@@ -129,7 +121,7 @@ const FirstComponents = () => {
             </div>
           </div>
 
-          <div className="px-2">
+          <div className="self-center">
             <Example_3Dcard image={food} />
           </div>
         </div>

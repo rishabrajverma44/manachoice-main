@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import NewProject from "./NewProject";
 
 const FourthComponent = () => {
   // State for Hotel Owners
@@ -81,7 +82,7 @@ const FourthComponent = () => {
 
   return (
     <div
-      className="py-4"
+      className="py-4 md:px-8"
       style={{
         background:
           "linear-gradient(180deg, rgba(0, 212, 255, 0.2) 0%, rgba(191, 70, 255, 0.2) 50%, rgba(222, 0, 75, 0.1) 100%)",
@@ -193,11 +194,8 @@ const FourthComponent = () => {
         </div>
       </div>
 
-      <div className="my-16">
-        <h3 className="text-center text-slate-900">
-          Let's Start a{" "}
-          <span className="font-extrabold text-xxl">New Project</span> Together
-        </h3>
+      <div className="my-2">
+        <NewProject />
       </div>
     </div>
   );

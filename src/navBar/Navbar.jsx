@@ -19,7 +19,6 @@ const Navbar = () => {
 
   const toggleServices = () => {
     setServicesOpen((prev) => !prev);
-
     setProductsOpen(false);
     setTraingOpen(false);
   };
@@ -29,35 +28,46 @@ const Navbar = () => {
     setServicesOpen(false);
     setProductsOpen(false);
   };
+
+  const toggleAllClose = () => {
+    setServicesOpen(false);
+    setProductsOpen(false);
+    setTraingOpen(false);
+  };
   return (
     <>
-      <main className="sticky top-0 z-50 bg-white shadow-md shadow-indigo-500/40">
-        <nav className="items-center relative z-50 py-2 md:py-0 md:mx-0 mx-2">
-          <div className="flex items-center w-100 md:px-2">
-            <section className="d-flex w-100">
-              <div className="flex items-center w-100">
-                <Link to="/" className="">
-                  <img src={logo} alt="logo" className="w-100" />
-                </Link>
-              </div>
+      <main className="sticky top-0 z-50 bg-white shadow-md shadow-green-800">
+        <nav className="items-center relative z-50 md:py-0 md:mx-0">
+          <div className="w-100 md:px-2">
+            <section className="d-flex justify-content-between w-100">
+              <Link to="/" className="d-flex w-50 no-underline">
+                <img src={logo} alt="logo" style={{ width: "180px" }} />
+                <span className="hidden lg:block mt-7 text-2xl fw-bold text-black">
+                  TechWorks (OPC) Pvt. Ltd.
+                  <br />
+                  <span className="hidden lg:block text-gray-500 text-sm fw-normal ml-4">
+                    LET'S BUILD THE FUTURE TOGETHER !
+                  </span>
+                </span>
+              </Link>
 
               <div className="place-content-center">
                 <FiMenu
                   onClick={() => setMenu(true)}
-                  className="text-3xl cursor-pointer md:hidden"
+                  className="text-4xl cursor-pointer md:hidden mx-4"
                 />
               </div>
 
-              <div className="menu hidden  lg:block w-100  place-content-center px-4">
+              <div className="menu hidden  lg:block place-content-center px-4">
                 <div className="float-end grid grid-cols-5 gap-4">
                   <div class="relative group inline-block">
                     <span class="cursor-pointer fw-bold">PRODUCTS+</span>
-                    <div class="absolute mt-2 left-0 w-full h-[4px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
+                    <div class="absolute mt-2 left-0 w-full h-[4px] bg-green-800 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
                     <div class="z-50 absolute top-full right-0 mt-4 rounded-lg w-60 bg-white shadow-md opacity-1 scale-y-0 group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-300 ease-in-out origin-top">
-                      <div class="p-2 cursor-pointer hover:bg-gray-100">
+                      <div class="p-2 cursor-pointer">
                         <Link
                           to="/food"
-                          className="block p-2 hover:bg-gray-100 no-underline text-black"
+                          className="cursor-pointer p-2 block hover:bg-gray-100 hover:rounded-lg no-underline text-black"
                         >
                           Food Booking App
                         </Link>
@@ -66,47 +76,41 @@ const Navbar = () => {
                   </div>
                   <div class="relative group inline-block">
                     <span class="cursor-pointer fw-bold">SERVICES+</span>
-                    <div class="absolute mt-2 left-0 w-full h-[4px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
-                    <div class="z-50 absolute top-full right-0 mt-4 rounded-lg w-60 bg-white shadow-md opacity-1 scale-y-0 group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-300 ease-in-out origin-top">
-                      <div class="p-2 cursor-pointer hover:bg-gray-100">
-                        <Link
-                          to="/web-service"
-                          className="block p-2 hover:bg-gray-100 no-underline text-black"
-                        >
-                          Web Design & Development
-                        </Link>
-                      </div>
-                      <div class="p-2 cursor-pointer hover:bg-gray-100">
-                        <Link
-                          to="/mobile-service"
-                          className="block p-2 hover:bg-gray-100 no-underline text-black"
-                        >
-                          Mobile App Development
-                        </Link>
-                      </div>
+                    <div class="absolute mt-2 left-0 w-full h-[4px] bg-green-800 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
+                    <div class="p-2 z-50 absolute top-full right-0 mt-4 rounded-lg w-60 bg-white shadow-md opacity-1 scale-y-0 group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-300 ease-in-out origin-top">
+                      <Link
+                        to="/web-service"
+                        className="cursor-pointer p-2 block hover:bg-gray-100 hover:rounded-lg no-underline text-black"
+                      >
+                        Web Design & Development
+                      </Link>
+
+                      <Link
+                        to="/mobile-service"
+                        className="cursor-pointer p-2 block hover:bg-gray-100 hover:rounded-lg no-underline text-black"
+                      >
+                        Mobile App Development
+                      </Link>
                     </div>
                   </div>
 
                   <div class="relative group inline-block">
                     <span class="cursor-pointer fw-bold"> TRAINING+</span>
-                    <div class="absolute mt-2 left-0 w-full h-[4px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
-                    <div class="z-50 absolute top-full right-0 mt-4 rounded-lg w-60 bg-white shadow-md opacity-1 scale-y-0 group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-300 ease-in-out origin-top">
-                      <div class="p-2 cursor-pointer hover:bg-gray-100">
-                        <Link
-                          to="/web-taining"
-                          className="block p-2 hover:bg-gray-100 no-underline text-black"
-                        >
-                          Web Design & Development
-                        </Link>
-                      </div>
-                      <div class="p-2 cursor-pointer hover:bg-gray-100">
-                        <Link
-                          to="/mobile-taining"
-                          className="block p-2 hover:bg-gray-100 no-underline text-black"
-                        >
-                          Mobile App Development
-                        </Link>
-                      </div>
+                    <div class="absolute mt-2 left-0 w-full h-[4px] bg-green-800 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
+                    <div class="p-2 z-50 absolute top-full right-0 mt-4 rounded-lg w-60 bg-white shadow-md opacity-1 scale-y-0 group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-300 ease-in-out origin-top">
+                      <Link
+                        to="/web-taining"
+                        className="cursor-pointer p-2 block hover:bg-gray-100 hover:rounded-lg no-underline text-black"
+                      >
+                        Web Design & Development
+                      </Link>
+
+                      <Link
+                        to="/mobile-taining"
+                        className="cursor-pointer p-2 block hover:bg-gray-100 hover:rounded-lg no-underline text-black"
+                      >
+                        Mobile App Development
+                      </Link>
                     </div>
                   </div>
 
@@ -116,7 +120,7 @@ const Navbar = () => {
                         ABOUT US
                       </Link>
                     </span>
-                    <div class="absolute mt-2 left-0 w-full h-[4px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
+                    <div class="absolute mt-2 left-0 w-full h-[4px] bg-green-800 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
                   </div>
 
                   <div class="relative group inline-block">
@@ -128,7 +132,7 @@ const Navbar = () => {
                         CONTACT-US
                       </Link>
                     </span>
-                    <div class="absolute mt-2 left-0 w-full h-[4px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
+                    <div class="absolute mt-2 left-0 w-full h-[4px] bg-green-800 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></div>
                   </div>
                 </div>
               </div>
@@ -138,13 +142,13 @@ const Navbar = () => {
           <div
             className={clsx(
               "fixed h-full w-screen lg:hidden bg-black/50 backdrop-blur-sm top-0 left-0 z-40 transition-all transform",
-              isSideMenuOpen ? "-translate-x-0" : "translate-x-full"
+              isSideMenuOpen ? "translate-x-0" : "translate-x-full"
             )}
           >
-            <section className="text-black bg-white flex-col absolute right-0 top-0 h-screen p-8 gap-8 z-50 w-56 flex">
+            <section className="text-black bg-white flex-col absolute right-0 top-0 h-screen p-8 gap-8 z-50 flex">
               <IoCloseOutline
                 onClick={() => setMenu(false)}
-                className="mt-0 mb-8 text-3xl cursor-pointer"
+                className="mt-0 mb-2 text-3xl cursor-pointer"
               />
 
               {/* Products Dropdown */}
@@ -163,7 +167,7 @@ const Navbar = () => {
                   <div className="mt-2">
                     <Link
                       to="/food"
-                      className="block p-2 hover:bg-gray-100 no-underline text-black"
+                      className="cursor-pointer p-2 block hover:bg-gray-100 hover:rounded-lg no-underline text-black"
                     >
                       - Food Booking App
                     </Link>
@@ -187,13 +191,13 @@ const Navbar = () => {
                   <div className="mt-2">
                     <Link
                       to="/web-service"
-                      className="block p-2 hover:bg-gray-100 no-underline text-black"
+                      className="cursor-pointer p-2 block hover:bg-gray-100 hover:rounded-lg no-underline text-black"
                     >
                       - Web Design & Development
                     </Link>
                     <Link
                       to="/mobile-service"
-                      className="block p-2 hover:bg-gray-100 no-underline text-black"
+                      className="cursor-pointer p-2 block hover:bg-gray-100 hover:rounded-lg no-underline text-black"
                     >
                       - Mobile App Development
                     </Link>
@@ -214,13 +218,13 @@ const Navbar = () => {
                   <div className="mt-2">
                     <Link
                       to="/web-taining"
-                      className="block p-2 hover:bg-gray-100 no-underline text-black"
+                      className="cursor-pointer p-2 block hover:bg-gray-100 hover:rounded-lg no-underline text-black"
                     >
                       - Web Design & Development
                     </Link>
                     <Link
                       to="/mobile-taining"
-                      className="block p-2 hover:bg-gray-100 no-underline text-black"
+                      className="cursor-pointer p-2 block hover:bg-gray-100 hover:rounded-lg no-underline text-black"
                     >
                       - Mobile App Development
                     </Link>
@@ -228,12 +232,12 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="relative">
+              <div className="relative" onClick={toggleAllClose}>
                 <Link to="/about" className="no-underline text-black">
                   ABOUT US
                 </Link>
               </div>
-              <div className="relative">
+              <div className="relative" onClick={toggleAllClose}>
                 <Link to="/contact-us" className="no-underline text-black">
                   CONTACT-US
                 </Link>
