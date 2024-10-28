@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import style from "../globlecss.module.css";
-const CardComponent = ({ image, heading, para }) => {
+const CardComponent = ({ image, heading, para, tech }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -28,9 +28,19 @@ const CardComponent = ({ image, heading, para }) => {
             isHovered ? "opacity-100" : "opacity-0"
           }`}
         >
-          <p className="text-slate-950 font-semibold text-sm">{para}</p>
+          <p className="text-slate-950 font-semibold text-sm subpixel-antialiased">
+            {para}
+          </p>
           <div className="flex flex-wrap justify-center gap-2 mb-1">
-            JAVA | REACT | PHP | .NET
+            {tech.map((item, index) => (
+              <span key={index}>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 font-semibold px-2 py-1 rounded">
+                  {" "}
+                  {item}
+                </span>
+                {index < tech.length - 1 && " | "}
+              </span>
+            ))}
           </div>
         </div>
       </div>

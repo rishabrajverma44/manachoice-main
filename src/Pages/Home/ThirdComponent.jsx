@@ -114,10 +114,10 @@ const ThirdComponent = () => {
             </div>
 
             <motion.button
-              variants={fadeIn("left", 0.4)}
+              variants={fadeIn("left", 0.2)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{ once: false, amount: 0.9 }}
+              viewport={{ once: false, amount: 0.3 }}
               style={{
                 border,
                 boxShadow,

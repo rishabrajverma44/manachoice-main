@@ -35,7 +35,7 @@ const SecondComponent = () => {
       style={{
         backgroundImage,
       }}
-      className="relative grid place-content-center overflow-hidden bg-gray-950 px-1 md:px-4 py-4 text-gray-200"
+      className="relative grid place-content-center overflow-hidden overflow-x-hidden bg-gray-950 px-1 md:px-4 py-4 text-gray-200"
     >
       <div className="grid grid-cols-1 gap-8 md:p-2 md:grid-cols-2">
         <div className="col py-4">
@@ -46,27 +46,31 @@ const SecondComponent = () => {
           </div>
         </div>
 
-        <div className="col bg-salte-500">
-          <div className="py-4 mt-4 px-6 md:mx-4">
-            <h5 className="max-w-xl bg-gradient-to-br from-white to-pink-400 bg-clip-text text-left text-xl font-medium leading-tight text-transparent sm:text-2xl sm:leading-tight md:text-xl md:leading-tight">
-              HMS #1 | Leading the Digital Revolution in Food Industry
-            </h5>
-            <p className="p-0 m-0 max-w-xl text-left text-gray leading-relaxed md:text-lg md:leading-relaxed">
-              Food Booking App: The premier cloud-based food booking app,
-              revolutionizing the food ordering experience. Our adaptable
-              solution caters to eateries of all scales, seamlessly integrating
-              diverse menus, table reservations, and online ordering.<br></br>
-              Our intuitive interface and extensive features streamline the food
-              ordering process, enriching customer service, and optimizing
-              overall operations. From menu exploration to secure payments, our
-              app simplifies food ordering, saving time and enhancing the
-              culinary journey
-            </p>
+        <div className="col">
+          <div className="mt-4 px-6 md:mx-4">
+            <article className="mb-3 bg-gradient-to-r from-slate-900 to-orange-900 card p-1 text-wrap text-white">
+              <h5 className="text-pink-400">
+                HMS #1 | Leading the Digital Revolution in Food Industry
+              </h5>
+              <p className="max-w-xl font-sans px-3 leading-relaxed md:text-lg md:leading-relaxed">
+                Food Booking App: The premier cloud-based food booking app,
+                revolutionizing the food ordering experience. Our adaptable
+                solution caters to eateries of all scales, seamlessly
+                integrating diverse menus, table reservations, and online
+                ordering.<br></br>
+                Our intuitive interface and extensive features streamline the
+                food ordering process, enriching customer service, and
+                optimizing overall operations. From menu exploration to secure
+                payments, our app simplifies food ordering, saving time and
+                enhancing the culinary journey
+              </p>
 
-            <p>
-              Want to <span style={{ "font-weight": "bold" }}>kick start</span>{" "}
-              your project right now?
-            </p>
+              <p>
+                Want to{" "}
+                <span style={{ "font-weight": "bold" }}>kick start</span> your
+                project right now?
+              </p>
+            </article>
             <motion.button
               variants={fadeIn("left", 0.4)}
               initial="hidden"
@@ -83,7 +87,7 @@ const SecondComponent = () => {
           </div>
         </div>
       </div>
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <Canvas>
           <Stars radius={10} count={2500} factor={4} fade speed={2} />
         </Canvas>

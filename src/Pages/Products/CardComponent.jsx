@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 import style from "../globlecss.module.css";
-const CardComponent = ({ image, heading, para }) => {
+import TypingText from "../../libs/TypingText";
+const CardComponent = ({ image, heading, para, speed, loopDelay }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -13,9 +14,7 @@ const CardComponent = ({ image, heading, para }) => {
     >
       <div className={style.card}>
         <div className={style.card_content}>
-          <h4 className="text-bold bg-clip-text text-bold text-transparent bg-gradient-to-r from-pink-800 to-violet-800 py-2">
-            {heading}
-          </h4>
+          <TypingText text={heading} speed={speed} loopDelay={loopDelay} />
           <img
             src={image}
             alt="Product"

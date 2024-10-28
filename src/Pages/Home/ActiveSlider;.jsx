@@ -37,9 +37,9 @@ const ActiveSlider = () => {
         >
           {ServiceData.map((item) => (
             <SwiperSlide key={item.title}>
-              <div className="flex flex-col md:flex-row items-center bg-white px-6 md:px-16 py-6">
+              <div className="flex flex-col md:flex-row items-center bg-white px-6 md:px-24 py-6">
                 <div className="md:w-1/2 text-center md:text-left mb-4 md:mb-0 antialiased">
-                  <h4 className="text-2xl lg:text-6xl font-semibold text-green-800">
+                  <h4 className="text-2xl lg:text-4xl font-semibold text-green-800">
                     {item.title}
                   </h4>
                   <p className="lg:text-lg text-gray-600 mt-2">
@@ -58,17 +58,19 @@ const ActiveSlider = () => {
           ))}
         </Swiper>
 
-        <div
-          className="swiper-button-prev flex items-center justify-center absolute mx-2"
-          style={{ color: "black" }}
-        >
-          <i className="fa-solid fa-angles-left"></i>
-        </div>
-        <div
-          className="swiper-button-next flex items-center justify-center absolute mx-2"
-          style={{ color: "black" }}
-        >
-          <i className="fa-solid fa-angles-right"></i>
+        <div className="hidden md:block">
+          <div
+            className="swiper-button-prev flex items-center justify-center absolute rounded-full border border-gray-300 p-8 hover:ring-2 hover:ring-green-500 transition-all duration-300"
+            style={{ color: "black" }}
+          >
+            <i className="fa-solid fa-angles-left"></i>
+          </div>
+          <div
+            className="swiper-button-next flex items-center justify-center absolute rounded-full border border-gray-300 p-8 hover:ring-2 hover:ring-green-500 transition-all duration-300"
+            style={{ color: "black" }}
+          >
+            <i className="fa-solid fa-angles-right"></i>
+          </div>
         </div>
       </div>
     </>

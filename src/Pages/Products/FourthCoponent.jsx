@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import NewProject from "./NewProject";
 
 const FourthComponent = () => {
-  // State for Hotel Owners
   const [hotelOwnersAdvantages] = useState([
     {
       title: "Enhanced Visibility and Reach",
@@ -36,7 +35,6 @@ const FourthComponent = () => {
     },
   ]);
 
-  // State for Customers
   const [customersAdvantages] = useState([
     {
       title: "Convenience and Ease",
@@ -193,8 +191,7 @@ const FourthComponent = () => {
           </ul>
         </div>
       </div>
-
-      <div className="my-2">
+      <div className="">
         <NewProject />
       </div>
     </div>

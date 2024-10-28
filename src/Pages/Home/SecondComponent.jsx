@@ -13,26 +13,31 @@ const SecondComponent = () => {
       image: web,
       heading: "Web Development",
       para: "Having a website in todays world is a major gamechanger if you run a business. So, do you have one?",
+      tech: ["JAVA", "REACT JS", "PHP", ".NET"],
     },
     {
       image: ecommerce,
       heading: "Ecommerce Development",
       para: "E-commerce gives businesses another means of reaching more customers and thus improving overall business success. We'll help you identify solutions that fit your needs.",
+      tech: ["PHP", "WP", "SHOPIFY", "CUSTOM"],
     },
     {
       image: mobile,
       heading: "Mobile App Development",
       para: "The world today revolves around the mobile phone. So having an app to represent your business on mobile creates an ever growing market for your product or service.",
+      tech: ["IOS", "ANDROID", "CROSS PLATFORM"],
     },
     {
       image: trainding,
       heading: "Trending Technologies",
       para: "Our designers will craft stunning and striking responsive website so that your websites standout amongst the crowd.",
+      tech: ["REACT JS", "NODE JS"],
     },
     {
       image: market,
       heading: "Digital Marketing ",
       para: "We’re masters of our craft, focusing on Branding, Digital Marketing, Website Design Solutions, App Development & Advertisement.",
+      tech: ["SEO", "SMO", "PPC"],
     },
   ];
   return (
@@ -60,10 +65,10 @@ const SecondComponent = () => {
             </span>
           </motion.h5>
           <motion.div
-            variants={fadeIn("up", 0.3)}
+            variants={fadeIn("up", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.7 }}
+            viewport={{ once: false, amount: 0.2 }}
             className="my-12 font-semibold"
           >
             manaChoice TechWork (OPC) Pvt. Ltd. is a leading provider of
@@ -81,6 +86,7 @@ const SecondComponent = () => {
               image={card.image}
               heading={card.heading}
               para={card.para}
+              tech={card.tech}
             />
           ))}
         </div>

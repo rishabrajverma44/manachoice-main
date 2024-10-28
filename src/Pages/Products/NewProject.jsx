@@ -4,7 +4,7 @@ import { fadeIn } from "../../libs/variants";
 
 const NewProject = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <motion.div
         initial="hidden"
         whileInView="show"
@@ -13,16 +13,16 @@ const NewProject = () => {
       >
         <motion.h1
           variants={fadeIn("left", 0.5)}
-          className="bg-clip-text text-bold text-transparent bg-gradient-to-r from-pink-500 to-violet-500 mb-2" // Added margin-bottom
+          className="bg-clip-text text-bold text-transparent bg-gradient-to-r from-pink-500 to-violet-500 mb-2"
         >
-          Let's Start
+          Let's Start a
         </motion.h1>
-        <FlipLink href="#">New-Project</FlipLink>
+        <FlipLink>New-Project</FlipLink>
         <motion.h1
           variants={fadeIn("right", 0.5)}
           className="bg-clip-text text-bold text-transparent bg-gradient-to-r from-pink-500 to-violet-500"
         >
-          a Together
+          Together
         </motion.h1>
       </motion.div>
     </div>
@@ -38,7 +38,7 @@ const FlipLink = ({ children, href }) => {
       initial="initial"
       whileHover="hovered"
       href={href}
-      className="relative block overflow-hidden whitespace-nowrap text-sm font-black uppercase sm:text-3xl md:text-md lg:text-5xl"
+      className="relative cursor-pointer block overflow-hidden whitespace-nowrap text-lg font-black uppercase sm:text-3xl md:text-md lg:text-5xl"
       style={{
         lineHeight: 0.85,
       }}
@@ -82,7 +82,7 @@ const FlipLink = ({ children, href }) => {
               ease: "easeInOut",
               delay: STAGGER * i,
             }}
-            className="inline-block text-pink-800"
+            className="inline-block text-pink -800"
             key={i}
           >
             {l}

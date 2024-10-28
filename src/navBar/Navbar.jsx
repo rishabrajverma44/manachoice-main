@@ -4,6 +4,7 @@ import { FiMenu } from "react-icons/fi";
 import { IoCloseOutline } from "react-icons/io5";
 import clsx from "clsx";
 import logo from "../asets/logo/manaChoice.png";
+import LogoTyping from "../libs/LogoTyping";
 
 const Navbar = () => {
   const [isSideMenuOpen, setMenu] = useState(false);
@@ -42,11 +43,11 @@ const Navbar = () => {
             <section className="d-flex justify-content-between w-100">
               <Link to="/" className="d-flex w-50 no-underline">
                 <img src={logo} alt="logo" style={{ width: "180px" }} />
-                <span className="hidden lg:block mt-7 text-2xl fw-bold text-black">
-                  TechWorks (OPC) Pvt. Ltd.
+                <span className="hidden lg:block text-2xl fw-bold text-black self-center ml-2">
+                  TechWorks
                   <br />
-                  <span className="hidden lg:block text-gray-500 text-sm fw-normal ml-4">
-                    LET'S BUILD THE FUTURE TOGETHER !
+                  <span className="hidden lg:block text-sm fw-normal font-mono text-green-900">
+                    <LogoTyping text="LET'S BUILD THE FUTURE TOGETHER !" />
                   </span>
                 </span>
               </Link>
@@ -148,7 +149,7 @@ const Navbar = () => {
             <section className="text-black bg-white flex-col absolute right-0 top-0 h-screen p-8 gap-8 z-50 flex">
               <IoCloseOutline
                 onClick={() => setMenu(false)}
-                className="mt-0 mb-2 text-3xl cursor-pointer"
+                className="mt-2 mb-2 text-3xl cursor-pointer"
               />
 
               {/* Products Dropdown */}

@@ -10,18 +10,21 @@ import {
 } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../libs/variants";
+import LogoTyping from "../../../libs/LogoTyping";
 
 const FirstComponent = () => {
   return (
-    <div className="bg-gradient-to-r from-violet-300 to-fuchsia-500">
+    <div className="bg-gradient-to-r from-violet-200 to-fuchsia-200">
       <div className="container mx-auto py-12 px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-10">
           <div>
             <h1
-              className="text-4xl font-bold mb-4"
+              className="text-3xl font-bold mb-4"
               style={{ color: "#317347" }}
             >
-              Web Design And Development Services in Bangalore
+              <span>Web Design And Development</span>
+              <br></br>
+              <LogoTyping text="Services in Bangalore " />
             </h1>
             <p className="text-lg text-gray-600">
               Delivering Premium Websites at Affordable Prices.
@@ -73,7 +76,7 @@ const FirstComponent = () => {
                 }}
                 className="group bg-indigo-600 hover:bg-indigo-700 relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
               >
-                Contact Now
+                Enquiry Now
                 <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
               </motion.button>
             </div>

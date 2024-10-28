@@ -16,42 +16,59 @@ const ThirdComponent = () => {
     {
       image: cost,
       heading: "Cost-Effective Marketing",
+      speed: 0.1,
+      loopdelay: 1,
       para: "With the app's reach, hotels can promote their offerings without breaking the bank, a pocket-friendly marketing avenue that yields results.",
     },
     {
       image: visibility,
       heading: "Increased Visibility",
+      speed: 0.1,
+      loopdelay: 1,
       para: "By being part of this app, hotels can showcase their delicious dishes to a wider audience, helping them stand out in the bustling culinary scene.",
     },
     {
       image: costomers,
       heading: "Expanded Customer Base",
+      speed: 0.1,
+      loopdelay: 1,
       para: "Embracing the app means opening doors to new customers who may have never discovered the hotel otherwise, broadening the reach.",
     },
     {
       image: operations,
       heading: "Efficient Operations",
+      speed: 0.3,
+      loopdelay: 1,
       para: "Utilizing the app streamlines order management, making the kitchen and operations run like a well-oiled machine, saving time and effort.",
     },
     {
       image: Centralized,
       heading: "Centralized Control",
+      speed: 0.3,
+      loopdelay: 1,
       para: "Hotels have the power to manage their profiles, menus, pricing, and promotions all in one place, simplifying the management process.",
     },
     {
       image: data,
       heading: "Data-Driven Insights",
       para: "The app's analytics provide valuable insights into customer preferences, enabling hotels to tailor menus and marketing for a personalized experience.",
+      speed: 0.2,
+      loopdelay: 1,
     },
     {
       image: innovation,
       heading: "Adaptability and Innovation",
       para: "By joining the app, hotel owners demonstrate their ability to adapt to technological advancements, showcasing innovation in how they reach and serve their customers.",
+      speed: 0.5,
+      loopdelay: 1,
     },
     {
       image: convenience,
       heading: "Convenience",
-      para: "Easily place food orders at your convenience.",
+      para: "Easily place food orders at your convenience anytime and anywhere. Save time and enjoy a seamless experience with quick order options and easy access to a variety of food choices.",
+
+      speed: 0.3,
+      loopdelay: 1,
     },
   ];
 
@@ -75,17 +92,17 @@ const ThirdComponent = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.5 }}
-          className="text-center"
+          className="text-center overflow-hidden"
         >
           <motion.h1
             variants={fadeIn("left", 0.9)}
-            className="text-bold text-green-800 mb-2"
+            className="font-bold text-green-800 mb-2"
           >
             Benefits of Using Food
           </motion.h1>
           <motion.h1
             variants={fadeIn("right", 0.9)}
-            className="bg-clip-text text-bold text-transparent bg-gradient-to-r from-pink-800 to-green-800"
+            className="bg-clip-text font-bold text-transparent bg-gradient-to-r from-pink-800 to-green-800"
           >
             Booking App
           </motion.h1>
@@ -100,6 +117,8 @@ const ThirdComponent = () => {
               image={card.image}
               heading={card.heading}
               para={card.para}
+              speed={card.speed}
+              loopDelay={card.loopdelay}
             />
           ))}
         </div>
