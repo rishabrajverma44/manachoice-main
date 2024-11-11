@@ -14,21 +14,21 @@ const brandImages = [react, js, python, node, druepal, word_press];
 const BrandImages = () => {
   return (
     <div className="flex justify-center overflow-hidden p-4">
-      <motion.div className="flex space-x-12">
+      <motion.div className="flex flex-wrap justify-center space-x-4 md:space-x-8 lg:space-x-12">
         {brandImages.map((image, index) => (
           <span
+            key={index}
             className="cursor-pointer rounded-full p-2 shadow-inner border-3 border-green-600 
-                transition-transform transform hover:scale-105 
-                hover:shadow-lg"
+              transition-transform transform hover:scale-105  my-2
+              hover:shadow-lg"
           >
             <motion.img
-              key={index}
               src={image}
               alt={`Brand ${index + 1}`}
-              className="h-24 w-24 rounded-full"
+              className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 rounded-full"
               variants={fadeIn(index % 2 === 0 ? "left" : "right", 0.2)}
               initial="hidden"
-              whileInView={"show"}
+              whileInView="show"
               whileHover={{ scale: 1.1, rotate: 10 }}
               viewport={{ once: false, amount: 0.7 }}
             />

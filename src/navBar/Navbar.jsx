@@ -41,16 +41,20 @@ const Navbar = () => {
         <nav className="items-center relative z-50 md:py-0 md:mx-0">
           <div className="w-100 md:px-2">
             <section className="d-flex justify-content-between w-100">
-              <Link to="/" className="d-flex w-50 no-underline">
-                <img src={logo} alt="logo" style={{ width: "180px" }} />
-                <span className="hidden lg:block text-2xl fw-bold text-black self-center ml-2">
-                  TechWorks
+              <div className="d-flex p-2">
+                <Link to="/" className="no-underline">
+                  <img src={logo} alt="logo" style={{ height: "70px" }} />
+                </Link>
+                <div className="hidden lg:block mt-6 ml-2">
+                  <span className="text-2xl fw-bold text-black self-center">
+                    TechWorks (OPC) Pvt. Ltd.
+                  </span>
                   <br />
-                  <span className="hidden lg:block text-sm fw-normal font-mono text-green-900">
+                  <span className="text-sm fw-normal font-mono text-green-900">
                     <LogoTyping text="LET'S BUILD THE FUTURE TOGETHER !" />
                   </span>
-                </span>
-              </Link>
+                </div>
+              </div>
 
               <div className="place-content-center">
                 <FiMenu

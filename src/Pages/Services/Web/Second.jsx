@@ -30,11 +30,11 @@ const Second = () => {
         </div>
       </div>
       <div className="bg-gray-100 text-center md:p-3">
-        <h1 className="font-sans text-slate-9 00">
+        <h1 className="font-sans text-slate-9 p-2">
           <AnimatedText
             text="Technologies Used"
             once={false}
-            repeatDelay={6000}
+            repeatDelay={1000}
           />
         </h1>
         <BrandImages />
