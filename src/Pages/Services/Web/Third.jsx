@@ -53,7 +53,7 @@ const Third = () => {
     },
   ];
   return (
-    <div className="bg-gradient-to-b from-indigo-200 to-pink-100">
+    <div className="bg-gradient-to-b from-indigo-200 to-pink-100 py-6">
       <div className="text-center md:py-20 py-2">
         <h4 className="text-pink-700 uppercase">
           <AnimatedText text="Service" once={false} repeatDelay={1000} />
