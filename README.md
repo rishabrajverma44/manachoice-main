@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# manaChoice
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Deployment](https://img.shields.io/badge/Deployed-Vercel-brightgreen)](https://manachoice.vercel.app/)
 
-## Available Scripts
+manaChoice is a React-based web application that connects users with local stores and farms, offering fresh local produce delivered to their doorstep.
 
-In the project directory, you can run:
+## 🚀 Live Demo
 
-### `npm start`
+Check out the live version here: [manaChoice](https://manachoice.vercel.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🏢 About Us
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**manaChoice TechWork (OPC) Pvt. Ltd.** is a leading provider of software solutions for businesses of all sizes. Our software is designed to help businesses improve their efficiency, productivity, and profitability.  
 
-### `npm test`
+We specialize in:
+- 🌐 **Web Development**  
+- 🛒 **E-commerce Development**  
+- 📱 **Mobile App Development**  
+- 📢 **Digital Marketing**  
+- 🍽️ **Food Booking Apps**  
+- 🎨 **Website Design & Development**  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📌 Features
 
-### `npm run build`
+- 🌱 **Local Farm Produce** - Connects users with nearby farms and stores  
+- 🛒 **Seamless Shopping Experience** - Easy cart management & checkout  
+- 📍 **Interactive Map Integration** - Locate nearby sellers with `react-leaflet`  
+- 🔄 **Real-time Updates** - Keeps product availability and pricing updated  
+- 📱 **Fully Responsive Design** - Works across all devices  
+- ⚡ **Fast & Optimized Performance** - Deployed on Vercel  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Frontend**: React, React Router, Tailwind CSS, Bootstrap, Framer-Motion 
+- **Deployment**: Vercel  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏗️ Installation & Setup
 
-### `npm run eject`
+To run the project locally, follow these steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/rishabrajverma44/manachoice-main
+cd manachoice-main
